@@ -501,3 +501,14 @@ PRODUCT_SOONG_NAMESPACES += vendor/partner_gms
 # Include imx_rpmsg_pingpong.ko to image
 PRODUCT_COPY_FILES += \
    $(OUT_DIR)/target/product/$(firstword $(PRODUCT_DEVICE))/obj/KERNEL_OBJ/drivers/rpmsg/imx_rpmsg_pingpong.ko:/vendor/imx_rpmsg_pingpong.ko
+
+# Sensors
+PRODUCT_PACKAGES += \
+    android.hardware.sensors-service.multihal \
+    android.hardware.sensors@2.1-nxp-IIO-Subhal
+
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.sensor.accelerometer.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.accelerometer.xml
+
+PRODUCT_COPY_FILES += \
+    $(IMX_PATH)/imx/iio_sensor/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf

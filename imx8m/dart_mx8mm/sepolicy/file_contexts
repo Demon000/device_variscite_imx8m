@@ -1,2 +1,5 @@
 /vendor/etc/bluetooth/bt_vendor.conf	    u:object_r:vendor_configs_file:s0
 /vendor/vendor_overlay_sensor/(basler|ov5640)/vendor/etc/configs/isp(/.*)?         u:object_r:vendor_configs_file:s0
+
+# Sensor HAL
+/sys/bus/iio/devices/iio:device[0-9]+  u:object_r:sysfs_iio_devices:s0
