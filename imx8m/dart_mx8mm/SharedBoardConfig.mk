@@ -66,6 +66,13 @@ BOARD_VENDOR_KERNEL_MODULES += \
     $(KERNEL_OUT)/drivers/net/wireless/broadcom/brcm80211/brcmutil/brcmutil.ko \
     $(KERNEL_OUT)/drivers/net/wireless/broadcom/brcm80211/brcmfmac/brcmfmac.ko
 
+BOARD_VENDOR_KERNEL_MODULES += \
+    $(KERNEL_OUT)/drivers/iio/buffer/kfifo_buf.ko \
+    $(KERNEL_OUT)/drivers/iio/buffer/industrialio-triggered-buffer.ko
+
+BOARD_VENDOR_KERNEL_MODULES += \
+    $(KERNEL_OUT)/drivers/iio/accel/adxl355_core.ko \
+    $(KERNEL_OUT)/drivers/iio/accel/adxl355_spi.ko
 
 #Cortex-M7
 BOARD_VENDOR_KERNEL_MODULES += \
